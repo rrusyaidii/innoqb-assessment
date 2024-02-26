@@ -1,22 +1,27 @@
 import React from "react";
 
-const ProductCard = ({ product }) => {
-  const { title, price, discountPercentage, thumbnail } = product;
+const ProductCard = ({ product, addCartItem }) => {
+  // ... product details
 
   return (
-    <div className="product-card">
-      <img src={thumbnail} alt={title} />
-      <div className="product-info">
-        <h3>{title}</h3>
-        <p>
-          Price: ${price.toFixed(2)} (
-          <span className="discount">-{discountPercentage}% off</span>)
-        </p>
-        {
-          <button onClick={() => setCartCount(cartCount + 1)}>
-            Add to Cart
-          </button>
-        }
+    <div className="flash-container">
+      <div className="title">
+        <h2>Flash Deals</h2>
+      </div>
+      <div className="card">
+        <div className="product">{/* <img src="" alt="" /> */}</div>
+        <div>
+          {/* <h3>{product.name}</h3>
+          <p>{product.price}</p> */}
+        </div>
+        <div>
+          {/* <div>borderradius50%</div> */}
+          <div></div>
+          <div></div>
+        </div>
+        <button className="btn" onClick={() => addCartItem(product)}>
+          <div>Add to Cart</div>
+        </button>
       </div>
     </div>
   );

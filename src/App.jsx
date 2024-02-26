@@ -1,14 +1,24 @@
 import React from "react";
 import Loading from "./components/Loading";
 import Header from "./components/Header";
-
-const url = "https://dummyjson.com/products";
+import Products from "./components/Products";
+import ProductCard from "./components/ProductCard";
 
 const App = () => {
-  const [loading, setLoading] = React.useState(true);
+  const [loading, setLoading] = React.useState(false);
+  const [products, setProducts] = React.useState([]);
+  const url = "https://dummyjson.com/products";
+
   if (loading) {
-    return <Header />;
+    return <Loading />;
   }
+  return (
+    <main>
+      <Header />
+      {/* <Products /> */}
+      <ProductCard />
+    </main>
+  );
 };
 
 export default App;

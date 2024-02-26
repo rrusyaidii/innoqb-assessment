@@ -1,7 +1,6 @@
 import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
-import React, { useState } from "react";
 import inno from "../assets/inno.png";
 
 const Header = ({ cartCount }) => (
