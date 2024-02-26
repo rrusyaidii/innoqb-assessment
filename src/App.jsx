@@ -15,8 +15,9 @@ const App = () => {
   return (
     <main>
       <Header />
-      {/* <Products /> */}
-      <ProductCard />
+      <div className="display">
+        <ProductCard />
+      </div>
     </main>
   );
 };

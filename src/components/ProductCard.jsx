@@ -1,4 +1,5 @@
 import React from "react";
+import inno from "../assets/inno.png";
 
 const ProductCard = ({ product, addCartItem }) => {
   // ... product details
@@ -9,18 +10,55 @@ const ProductCard = ({ product, addCartItem }) => {
         <h2>Flash Deals</h2>
       </div>
       <div className="card">
-        <div className="product">{/* <img src="" alt="" /> */}</div>
-        <div>
-          {/* <h3>{product.name}</h3>
-          <p>{product.price}</p> */}
+        <div className="img-container">
+          <img src={inno} alt="" />
         </div>
-        <div>
-          {/* <div>borderradius50%</div> */}
-          <div></div>
-          <div></div>
+        <div className="card-text">
+          <p>Sample 1</p>
+          <p>RM99</p>
         </div>
-        <button className="btn" onClick={() => addCartItem(product)}>
-          <div>Add to Cart</div>
+        <div className="card-color-choice">
+          {/* loop api data here */}
+          <div className="card-prod-color"></div>
+        </div>
+        <button className="add-to-cart" onClick={() => {}}>
+          <div className="text-add-to-cart">Add to Cart</div>
+        </button>
+      </div>
+      <div className="card">
+        <div className="img-container">
+          <img src={inno} alt="" />
+        </div>
+        <div className="card-text">
+          <p>
+            <strong>Sample 1</strong>
+          </p>
+          <p>RM99</p>
+        </div>
+        <div className="card-color-choice">
+          {/* loop api data here */}
+          <div className="card-prod-color"></div>
+        </div>
+        <button className="add-to-cart" onClick={() => {}}>
+          <div className="text-add-to-cart">Add to Cart</div>
+        </button>
+      </div>
+      <div className="card">
+        <div className="img-container">
+          <img src={inno} alt="" />
+        </div>
+        <div className="card-text">
+          <p>
+            <strong>Sample 1</strong>
+          </p>
+          <p>RM99</p>
+        </div>
+        <div className="card-color-choice">
+          {/* loop api data here */}
+          <div className="card-prod-color"></div>
+        </div>
+        <button className="add-to-cart" onClick={() => {}}>
+          <div className="text-add-to-cart">Add to Cart</div>
         </button>
       </div>
     </div>
