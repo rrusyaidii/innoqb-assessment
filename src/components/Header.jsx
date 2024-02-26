@@ -26,7 +26,10 @@ const Header = ({ cartCount }) => (
           </div>
           <div className="symbols">
             <CiShoppingCart className="symbol" />
-            <span className="cart-icon">Cart{cartCount}</span>
+            <span className="cart-icon">Cart</span>
+            <div className="amount-container">
+              <p className="total-amount">0</p>
+            </div>
           </div>
         </div>
       </div>
