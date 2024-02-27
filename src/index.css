@@ -342,3 +342,60 @@ Input
   text-transform: capitalize;
   letter-spacing: var(--letterSpacing);
 }
+
+/*=============== 
+Mobile
+===============*/
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  .input-icon {
+    display: none;
+  }
+
+  .nav-center {
+    background-color: var(--white);
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .card .img-container img {
+    width: 100%;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  .title {
+    color: var(--red);
+    text-transform: capitalize;
+    text-align: left;
+  }
+
+  .add-to-cart {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .flash-container {
+    display: grid;
+  }
+
+  .symbol {
+    color: black;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+  }
+}
