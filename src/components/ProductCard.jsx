@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ProductCard = ({
   title,
@@ -7,9 +7,15 @@ const ProductCard = ({
   thumbnail,
   discountPercentage,
   images,
+  updateCartCount,
 }) => {
   let discountedPrice = price - (price * discountPercentage) / 100;
   discountedPrice = discountedPrice.toFixed(2);
+
+  const addToCart = () => {
+    // Call updateCartCount when Add to Cart is clicked
+    updateCartCount();
+  };
 
   return (
     <div className="flash-container">
@@ -33,7 +39,7 @@ const ProductCard = ({
           <div className="card-prod-color1"></div>
           <div className="card-prod-color2"></div>
         </div>
-        <button className="add-to-cart" onClick={() => {}}>
+        <button className="add-to-cart" onClick={addToCart}>
           <div className="text-add-to-cart">Add to Cart</div>
         </button>
       </div>
