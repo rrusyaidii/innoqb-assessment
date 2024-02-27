@@ -1,6 +1,7 @@
 import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
+import { CiSearch } from "react-icons/ci";
 import inno from "../assets/inno.png";
 
 const Header = ({ cartCount }) => (
@@ -8,11 +9,14 @@ const Header = ({ cartCount }) => (
     <div className="nav-center">
       <img src={inno} alt="logo" className="logo" />
       <div className="nav-container">
-        <input
-          type="text"
-          className="input-text"
-          placeholder="Search the store"
-        />
+        <div className="input-icon">
+          <input
+            type="text"
+            className="input-text"
+            placeholder="Search the store"
+          />
+          <CiSearch className="search-icon" />
+        </div>
       </div>
       <div>
         <div className="nav-links">

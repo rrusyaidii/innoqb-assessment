@@ -90,21 +90,6 @@ Navbar
   justify-content: space-between;
   align-items: center;
 }
-.input-text {
-  padding: 1rem;
-  border: none;
-  border-radius: 2rem;
-  margin-right: 1rem;
-  font-size: 1rem;
-  letter-spacing: var(--letterSpacing);
-  transition: var(--transition);
-  width: var(--fixed-width);
-}
-
-.input-text::placeholder {
-  text-transform: capitalize;
-  letter-spacing: var(--letterSpacing);
-}
 
 .nav-links {
   flex: 1;
@@ -322,4 +307,38 @@ Image Hover
 
 .img-container:hover .thumbnail-image {
   opacity: 0;
+}
+
+/*=============== 
+Input
+===============*/
+
+.input-icon {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.5rem;
+}
+
+.input-text {
+  padding: 1rem;
+  padding-right: 40px; /* Adjust the padding to accommodate the icon */
+  border: none;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  letter-spacing: var(--letterSpacing);
+  transition: var(--transition);
+  width: var(--fixed-width);
+}
+
+.input-text::placeholder {
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
 }
