@@ -320,3 +320,26 @@ Product card
   text-decoration: line-through;
   color: #999;
 }
+
+/*=============== 
+Image Hover
+===============*/
+
+.img-container img {
+  transition: opacity 0.5s ease;
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.img-container:hover .hover-image {
+  opacity: 1;
+}
+
+.img-container:hover .thumbnail-image {
+  opacity: 0;
+}

@@ -15,7 +15,8 @@ const ProductCard = ({
     <div className="flash-container">
       <div className="card">
         <div className="img-container">
-          <img src={thumbnail} alt={title} />
+          <img src={thumbnail} alt={title} className="thumbnail-image" />
+          <img src={images[1]} alt="" className="hover-image" />
         </div>
         <div className="card-text">
           <p>

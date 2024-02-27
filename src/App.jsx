@@ -33,7 +33,6 @@ const App = () => {
   return (
     <main>
       <Header />
-      {/* <ProductCard /> */}
       <Products products={products} />
     </main>
   );
