@@ -1,61 +1,36 @@
 import React from "react";
-import inno from "../assets/inno.png";
 
-const ProductCard = ({ product, addCartItem }) => {
-  // ... product details
+const ProductCard = ({
+  title,
+  id,
+  price,
+  thumbnail,
+  discountPercentage,
+  images,
+}) => {
+  let discountedPrice = price - (price * discountPercentage) / 100;
+  discountedPrice = discountedPrice.toFixed(2);
 
   return (
     <div className="flash-container">
-      <div className="title">
-        <h2>Flash Deals</h2>
-      </div>
       <div className="card">
         <div className="img-container">
-          <img src={inno} alt="" />
-        </div>
-        <div className="card-text">
-          <p>Sample 1</p>
-          <p>RM99</p>
-        </div>
-        <div className="card-color-choice">
-          {/* loop api data here */}
-          <div className="card-prod-color"></div>
-        </div>
-        <button className="add-to-cart" onClick={() => {}}>
-          <div className="text-add-to-cart">Add to Cart</div>
-        </button>
-      </div>
-      <div className="card">
-        <div className="img-container">
-          <img src={inno} alt="" />
+          <img src={thumbnail} alt={title} />
         </div>
         <div className="card-text">
           <p>
-            <strong>Sample 1</strong>
+            (Product {id})Sample - Computers <br />& Accesories For Sale - Black
           </p>
-          <p>RM99</p>
-        </div>
-        <div className="card-color-choice">
-          {/* loop api data here */}
-          <div className="card-prod-color"></div>
-        </div>
-        <button className="add-to-cart" onClick={() => {}}>
-          <div className="text-add-to-cart">Add to Cart</div>
-        </button>
-      </div>
-      <div className="card">
-        <div className="img-container">
-          <img src={inno} alt="" />
-        </div>
-        <div className="card-text">
           <p>
-            <strong>Sample 1</strong>
+            <span className="original-price">${price} from</span>{" "}
+            <span className="discounted-price"> ${discountedPrice}</span>
           </p>
-          <p>RM99</p>
         </div>
         <div className="card-color-choice">
           {/* loop api data here */}
           <div className="card-prod-color"></div>
+          <div className="card-prod-color1"></div>
+          <div className="card-prod-color2"></div>
         </div>
         <button className="add-to-cart" onClick={() => {}}>
           <div className="text-add-to-cart">Add to Cart</div>

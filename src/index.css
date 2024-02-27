@@ -111,9 +111,9 @@ Navbar
   align-items: center;
 }
 .input-text {
-  padding: 0.5rem;
+  padding: 1rem;
   border: none;
-  border-radius: var(--borderRadius);
+  border-radius: 2rem;
   margin-right: 1rem;
   font-size: 1rem;
   letter-spacing: var(--letterSpacing);
@@ -178,23 +178,26 @@ Product card
 */
 
 .flash-container {
-  margin: 6rem;
+  margin: 2rem;
   position: relative;
   max-width: 300px;
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+}
+
+.container {
+  margin: 2rem 0 0rem 0;
 }
 
 .title {
   color: var(--red);
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  /* text-transform: capitalize; */
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .card-text {
-  font-size: 16px;
+  font-size: 11px;
   text-align: left;
   margin: 0.5rem 0;
   line-height: 1.5rem;
@@ -205,8 +208,7 @@ Product card
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
-  background: var(--white);
-  box-shadow: var(--shadow-2);
+  background: var(--backgroundColor);
   transition: var(--transition);
   padding: 0 2rem 2rem 0;
 }
@@ -230,6 +232,21 @@ Product card
   background: yellow;
   width: 1rem;
   height: 1rem;
+  cursor: pointer;
+}
+.card-prod-color1 {
+  border-radius: 50%;
+  background: black;
+  width: 1rem;
+  cursor: pointer;
+  height: 1rem;
+}
+.card-prod-color2 {
+  border-radius: 50%;
+  background: blue;
+  width: 1rem;
+  cursor: pointer;
+  height: 1rem;
 }
 
 .add-to-cart {
@@ -240,6 +257,8 @@ Product card
   text-transform: capitalize;
   cursor: pointer;
   width: 10rem;
+  position: relative;
+  bottom: -2rem;
 }
 
 .add-to-cart:hover {
@@ -283,4 +302,21 @@ Product card
     width: 100%;
     height: 100%;
   }
+}
+
+.discounted-price {
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.original-price,
+.discounted-price {
+  margin-right: 2px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
 }

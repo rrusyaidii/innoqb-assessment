@@ -1,24 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import ProductCard from "./ProductCard";
 
-const Products = () => {
-  const [products, setProducts] = useState([]);
-  const url = "https://dummyjson.com/products";
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("https://dummyjson.com/products");
-      const data = await response.json();
-      setProducts(data.products);
-    };
-
-    fetchData();
-  }, []);
-
+const Products = ({ products }) => {
   return (
-    <div className="product-list">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+    <div className="container">
+      <h1 className="title">flash deals</h1>
+      <div className="flash-container">
+        {products.map((product) => {
+          return <ProductCard key={product.id} {...product} />;
+        })}
+      </div>
     </div>
   );
 };
