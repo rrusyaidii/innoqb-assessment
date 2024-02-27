@@ -168,6 +168,10 @@ Product card
   line-height: 1.5rem;
 }
 
+.card-text:hover {
+  text-decoration: underline;
+}
+
 .card {
   display: flex;
   flex-direction: column;
