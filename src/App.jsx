@@ -15,7 +15,7 @@ const App = () => {
       const response = await fetch(url);
       const data = await response.json(); // Store the response in a variable named 'data'
       setLoading(false);
-      setProducts(data.products); // Update state with 'data.products'
+      setProducts(data.products.slice(0, 8));
       console.log(data.products);
     } catch (error) {
       setLoading(false);
